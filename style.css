@@ -13,6 +13,7 @@ body {
   font-weight: 500;
   display: flex;
   min-height: 100vh;
+  min-width: 100vh;
 }
 main {
   width: 90vh;
@@ -112,10 +113,12 @@ main form input[type='submit']:hover {
 }
 
 section.images {
+  width: 50vw;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
   padding: 3rem;
-  margin-left: 4rem;
+
 }
 section.images img {
   width: 90%;
@@ -131,3 +134,24 @@ section.images .circle {
   clip-path: circle(40% at right 80%);
   z-index: -1;
 }
+
+@media only screen and (min-width:900px) and (max-width: 1200px) {
+  section.images img{
+    width: 110%;
+    margin-bottom: 2rem;
+  }
+  section.images .circle {
+    clip-path: circle(30% at right 80%);
+   
+  }
+}
+@media only screen and (max-width:900px){
+  section.images{
+    display: none;
+    visibility: hidden;
+  }
+  main{
+    width: 100vh;
+  }
+} 
+
